@@ -14,7 +14,10 @@ export default function CartSidebar() {
           {!cart.length && <div className="empty-state"><ShoppingBag size={42} /><h3>Your cart is empty</h3><p>Add a Moroccan favorite from our menu.</p></div>}
           {cart.map((item) => (
             <div className="cart-line" key={item.id}>
-              <img src={item.image} alt="" />
+              {(() => {
+                const imgSrc = item.image && item.image.startsWith('/') ? import.meta.env.BASE_URL + item.image.replace(/^\/+/, '') : item.image
+                return <img src={imgSrc} alt={item.name} />
+              })()}
               <div><h3>{item.name}</h3><span>{formatPrice(item.price)}</span><div className="quantity-controls"><button onClick={() => updateQuantity(item.id, -1)} aria-label={`Decrease ${item.name}`}><Minus size={14} /></button><b>{item.quantity}</b><button onClick={() => updateQuantity(item.id, 1)} aria-label={`Increase ${item.name}`}><Plus size={14} /></button></div></div>
               <button className="icon-button danger" onClick={() => removeFromCart(item.id)} aria-label={`Remove ${item.name}`}><Trash2 size={17} /></button>
             </div>
