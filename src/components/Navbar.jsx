@@ -14,7 +14,7 @@ export default function Navbar() {
         <Link className="brand" to="/" onClick={() => setOpen(false)}><span className="brand-mark">M</span><span>Moroccan <b>Food</b></span></Link>
         <button className="mobile-toggle" onClick={() => setOpen(!open)} aria-label="Toggle navigation">{open ? <X /> : <MenuIcon />}</button>
         <div className={`nav-panel ${open ? 'open' : ''}`}>
-          <div className="nav-links">{links.map(([to, label]) => <NavLink key={to} to={to} onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>{label}</NavLink>)}</div>
+          <div className="nav-links">{links.map(([to, label]) => <NavLink key={to} to={to} onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>{label}</NavLink>)}{user && <NavLink to="/profile" onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>Profile</NavLink>}</div>
           <div className="nav-actions">
             <Link className="nav-icon" to="/favorites" aria-label="Favorites"><Heart size={20} /><span className="badge">{favorites.length}</span></Link>
             <button className="nav-icon" onClick={() => setCartOpen(true)} aria-label="Open cart"><ShoppingBag size={20} /><span className="badge">{cartCount}</span></button>

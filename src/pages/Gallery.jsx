@@ -1,12 +1,12 @@
 const images = [
-  ['/images/tajine2.webp', 'Glazed tagine with vegetables'],
-  ['/images/Couscous.webp', 'Royal couscous platter'],
-  ['/images/pastilla.jpeg', 'Crisp Moroccan pastilla'],
-  ['/images/chermoula-fish.jpeg', 'Fish with fresh chermoula'],
-  ['/images/mechoui.jpeg', 'Slow roasted mechoui lamb'],
-  ['/images/msemen.jpeg', 'Freshly folded msemen'],
-  ['/images/Zaalouk.jpeg', 'Smoky zaalouk salad'],
-  ['/images/Harira & Dates 2.webp', 'Harira soup and dates']
+  [import.meta.env.BASE_URL + 'images/tajine2.webp', 'Glazed tagine with vegetables'],
+  [import.meta.env.BASE_URL + 'images/Couscous.webp', 'Royal couscous platter'],
+  [import.meta.env.BASE_URL + 'images/pastilla.jpeg', 'Crisp Moroccan pastilla'],
+  [import.meta.env.BASE_URL + 'images/chermoula-fish.jpeg', 'Fish with fresh chermoula'],
+  [import.meta.env.BASE_URL + 'images/mechoui.jpeg', 'Slow roasted mechoui lamb'],
+  [import.meta.env.BASE_URL + 'images/msemen.jpeg', 'Freshly folded msemen'],
+  [import.meta.env.BASE_URL + 'images/Zaalouk.jpeg', 'Smoky zaalouk salad'],
+  [import.meta.env.BASE_URL + 'images/Harira & Dates 2.webp', 'Harira soup and dates']
 ]
 
 export default function Gallery() {

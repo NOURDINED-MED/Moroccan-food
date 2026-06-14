@@ -18,7 +18,7 @@ export default function Contact() {
       <header className="page-header container"><span className="eyebrow">Come say salam</span><h1>We would love to host you.</h1><p>Reserve a table, plan a celebration, or ask our kitchen a question.</p></header>
       <section className="container contact-grid">
         <div className="contact-details">
-          <div className="contact-image"><img src="/images/couscouss2.jpg" alt="A Moroccan couscous table ready for guests" /></div>
+          <div className="contact-image"><img src={`${import.meta.env.BASE_URL}images/couscouss2.jpg`} alt="A Moroccan couscous table ready for guests" /></div>
           <div className="contact-list">
             <a href="https://maps.google.com" target="_blank" rel="noreferrer"><MapPin /><span><b>Visit us</b>12 Riad Zitoun, Marrakech Medina</span></a>
             <a href="tel:+212524123456"><Phone /><span><b>Call us</b>+212 524 123 456</span></a>
